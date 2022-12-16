@@ -6,7 +6,7 @@ export class InMemoryNotificationRepository implements NotificationRepository {
 
   async findById(notificationId: string): Promise<Notification | null> {
     const notification = this.notifications.find(
-      (item) => item.id === notificationId,
+      (notification) => notification.id === notificationId,
     );
 
     if (!notification) return null;
